@@ -16,7 +16,7 @@ const Stocks = (props) => {
             {
                 stocks.map((org, i) => (
                     <Link key ={i} to={`/price/${org.symbol}`}>
-                        <h2>{org.name}</h2>
+                        <h2>{org.name}{org.symbol}</h2>
                     </Link>
                 ))
             }

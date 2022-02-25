@@ -7,6 +7,8 @@ const Price = (props) => {
 
     const url = `https://financialmodelingprep.com/api/v3/quote-short/${symbol}?apikey=${apiKey}`;
 
+    console.log(url)
+
     const [org, setOrg] = useState(null);
 
     const getOrg = async () => {
@@ -22,9 +24,9 @@ const Price = (props) => {
         return (
             <div>
                 <h1>
-                    Stock: {org.symbol}
+                    Stock: {org[0].symbol}
                     <br />
-                    Price: {org.price}
+                    Price: {org[0].price}
                 </h1>
             </div>
         );
@@ -36,4 +38,3 @@ const Price = (props) => {
 };
 
 export default Price;
-
